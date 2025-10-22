@@ -46,14 +46,14 @@ body {
 
 .brickwall :nth-child(odd) {
     margin-left: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
 
 
 }
 
 .brickwall :nth-child(even) {
     margin-left: 110px;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
 }
 
 .brick {
