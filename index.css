@@ -2,23 +2,9 @@
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0 100px auto;
+    margin: 0 auto;
     color: white;
     background-color: #000000;
-    background-image: linear-gradient(45deg,
-            #5d0092 25%,
-            transparent 25%,
-            transparent 75%,
-            transparent 75%,
-            #ff7b00),
-        linear-gradient(-45deg,
-            #4c6800 25%,
-            transparent 25%,
-            transparent 75%,
-            #333 75%,
-            #333);
-    background-size: 50px 50px;
-    height: 250px;
 }
 
 
@@ -32,14 +18,52 @@ body {
     display: flex;
     justify-content: center;
     align-self: center;
+    height: 100%;
+    width: 100%;
 }
 
 .figure {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     position: relative;
+    left: 25%;
+    top: 20px;
 }
+
+.brickwall {
+    display: grid;
+    grid-template-columns: repeat(6, 92px);
+    grid-template-rows: masonry;
+    position: absolute;
+    column-gap: 5px;
+    row-gap: 5px;
+    z-index: -5;
+    left: -50px;
+}
+
+.brickwall :nth-child(odd) {
+    margin-left: 10px;
+    margin-bottom: 5px;
+
+
+}
+
+.brickwall :nth-child(even) {
+    margin-left: 110px;
+    margin-bottom: 5px;
+}
+
+.brick {
+    background-color: rgb(61, 61, 61);
+    border-radius: 5px;
+    padding: 40px 90px;
+    box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgb(45, 45, 45);
+}
+
 
 /*===========
 HEAD SHAPE
@@ -111,6 +135,7 @@ HEAD SHAPE
     border-bottom-right-radius: 50px;
     border-top-right-radius: 60px;
     border-top-left-radius: 20px;
+
 }
 
 .chin {
@@ -675,14 +700,14 @@ HAIR
 .hairback {
     width: 255px;
     height: 390px;
-    background-color: rgb(2, 0, 3);
+    background-color: rgb(39, 0, 59);
     position: absolute;
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
     border-top-left-radius: 150px;
     border-top-right-radius: 150px;
-    z-index: -2;
+    z-index: -4;
 }
 
 .hairdetail1 {
@@ -842,4 +867,21 @@ BLOOD
     font-weight: bold;
     padding-top: 12px;
     color: rgb(212, 255, 0);
+}
+
+/*===========
+Webbing
+============*/
+
+.webbing {
+    width: 400px;
+    height: 500px;
+    background-image: linear-gradient(180deg, black, rgb(55, 0, 255), rgb(128, 0, 79), rgb(202, 131, 0), black 50%);
+    position: absolute;
+    top: -79px;
+    left: -100px;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border: 30px ridge rgba(255, 255, 255, 0.5);
+    z-index: -4;
 }
