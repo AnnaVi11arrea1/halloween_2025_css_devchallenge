@@ -30,7 +30,7 @@ body {
     height: 100%;
     position: relative;
     left: 25%;
-    top: 20px;
+    top: 130px;
 }
 
 .brickwall {
@@ -47,8 +47,6 @@ body {
 .brickwall :nth-child(odd) {
     margin-left: 10px;
     margin-bottom: 7px;
-
-
 }
 
 .brickwall :nth-child(even) {
@@ -60,9 +58,10 @@ body {
     background-color: rgb(61, 61, 61);
     border-radius: 5px;
     padding: 40px 90px;
-    box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 4px 5px 0px 3px rgba(0, 0, 0, 0.5);
     border: 2px solid rgb(45, 45, 45);
 }
+
 
 
 /*===========
