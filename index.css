@@ -3,10 +3,14 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0 auto;
-    color: white;
-    background-color: #000000;
+    color: rgb(156, 156, 156);
+    background-color: black;
 }
 
+h2 {
+    display: flex;
+    justify-self: center;
+}
 
 .nosifer-regular {
     font-family: "Nosifer", sans-serif;
@@ -15,7 +19,7 @@ body {
 }
 
 .container {
-    display: flex;
+    display: inline-block;
     justify-content: center;
     align-self: center;
     height: 100%;
@@ -28,9 +32,9 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
-    position: relative;
-    left: 25%;
-    top: 130px;
+    position: absolute;
+    left: 275px;
+    top: 225px;
 }
 
 .brickwall {
@@ -61,8 +65,6 @@ body {
     box-shadow: inset 4px 5px 0px 3px rgba(0, 0, 0, 0.5);
     border: 2px solid rgb(45, 45, 45);
 }
-
-
 
 /*===========
 HEAD SHAPE
@@ -394,7 +396,6 @@ EYES
 }
 
 @keyframes blinklashes {
-
     0%,
     8%,
     14%,
@@ -402,7 +403,6 @@ EYES
     100% {
         height: 20px;
     }
-
     10% {
         height: 60px;
     }
@@ -423,7 +423,6 @@ MOUTH
     left: 47%;
     transform: translateX(-50%);
     -webkit-box-reflect: right;
-
 }
 
 .lipbottom {
@@ -452,7 +451,6 @@ MOUTH
     transform: rotateZ(20deg);
     border-top: 5px solid rgb(25, 0, 89);
     border-top-style: groove;
-
 }
 
 .cornerright {
@@ -468,7 +466,6 @@ MOUTH
     border-top: 5px solid rgb(25, 0, 89);
     border-top-style: groove;
 }
-
 
 .liplight {
     width: 20px;
@@ -517,7 +514,6 @@ MOUTH
     left: 50%;
     transform: rotateZ(25deg);
     border-bottom-right-radius: 50%;
-
 }
 
 /*===========
@@ -811,61 +807,190 @@ BLOOD
     0% {
         top: 340px;
     }
-
     100% {
         top: 450px;
         opacity: 20%;
     }
 }
 
-.bow {
-    width: 50px;
+.flower {
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    top:50px;
+    left: 120px;
+    z-index: 5;
+    rotate: 25deg;
+}
+
+.rosecenter {
+    width: 25px;
     height: 50px;
-    background-color: rgb(140, 255, 0);
+    background-color: rgb(0, 0, 0);
     position: absolute;
     top: 20px;
-    left: 225px;
+    left: 5px;
     transform: translateX(-50%) rotateZ(20deg);
     border-radius: 40%;
-    z-index: 5;
-    box-shadow: inset 0 0 10px 1px rgb(0, 119, 2);
+    box-shadow: inset 0 0 2px 1px rgba(255, 0, 0, 0.42);
+    z-index: 2;
 }
 
-.bowleft {
-    width: 55px;
-    height: 60px;
-    background-color: rgb(140, 255, 0);
+.rosemiddle {
+    width: 20px;
+    height: 5px;
     position: absolute;
-    top: 2px;
-    left: -50px;
-    border-radius: 20% 50% 50% 20%;
-    transform: rotateZ(-20deg);
-    box-shadow: inset 0 0 10px 1px rgb(0, 119, 2);
-}
-
-.bowright {
-    width: 55px;
-    height: 60px;
-    background-color: rgb(140, 255, 0);
-    position: absolute;
-    top: 5px;
-    right: -47px;
-    border-radius: 50% 20% 20% 50%;
-    transform: rotateZ(20deg);
-    box-shadow: inset 0 0 10px 1px rgb(0, 119, 2);
-}
-
-.bowcenter {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: 5px;
-    left: 23px;
+    background-color: transparent;
+    top: 20px;
+    left: 12px;
     transform: translateX(-50%);
-    border-radius: 25%;
+    border-radius: 50%;
     font-weight: bold;
     padding-top: 12px;
-    color: rgb(212, 255, 0);
+    border-bottom: 5px solid black;
+    box-shadow: inset 0px 1px 5px 0 rgba(255, 0, 0, 0.42);
+    z-index: 2;
+}
+
+
+.roseleft {
+    width: 55px;
+    height: 60px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 2px;
+    left: -45px;
+    border-radius: 50% 50% 20% 20%;
+    transform: rotateZ(-45deg);
+    box-shadow: inset 0 5px 3px 0 rgba(255, 0, 0, 0.3);
+}
+
+.roseleft2 {
+    width: 45px;
+    height: 60px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 8px;
+    left: -20px;
+    border-radius: 50% 50% 20% 20%;
+    transform: rotateZ(-20deg);
+    box-shadow: inset 0 5px 7px 0 rgba(255, 0, 0, 0.3);
+}
+
+.roseright {
+    width: 55px;
+    height: 60px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 50% 50% 20% 20%;
+    transform: rotateZ(45deg);
+    box-shadow: inset 0 5px 3px 0 rgba(255, 0, 0, 0.3);
+}
+
+.roseright2 {
+    width: 45px;
+    height: 60px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 12px;
+    left: -3px;
+    border-radius: 50% 50% 20% 20%;
+    transform: rotateZ(45deg);
+    box-shadow: inset 0 5px 7px 0 rgba(255, 0, 0, 0.3);
+}
+
+.rosefrontleft {
+    width: 35px;
+    height: 20px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 35px;
+    left: -20px;
+    border-radius: 50% 50% 20% 20%;
+    transform: rotateZ(20deg);
+    box-shadow: inset 0 5px 5px 0 rgba(255, 0, 0, 0.42);
+    z-index: 5;
+}
+
+.rosefrontleft2 {
+    width: 45px;
+    height: 30px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 46px;
+    left: -35px;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotateZ(20deg);
+    z-index: 5;
+}
+
+.rosefrontleftdetail {
+    width: 47px;
+    height: 5px;
+    position: absolute;
+    background-color: transparent;
+    top: 3px;
+    left: 24px;
+    transform: translateX(-50%);
+    border-radius: 20% 50% 50% 50%;
+    font-weight: bold;
+    padding-top: 12px;
+    box-shadow: inset 0px -2px 5px 0 rgba(255, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.rosefrontright {
+    width: 25px;
+    height: 20px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 35px;
+    left: 10px;
+    border-radius: 50% 50% 20% 20%;
+    transform: rotateZ(-20deg);
+    box-shadow: inset 0 5px 5px 0 rgba(255, 0, 0, 0.42);
+    z-index: 5;
+}
+
+.rosefrontright2 {
+    width: 45px;
+    height: 30px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 45px;
+    left: 10px;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotateZ(-15deg);
+    z-index: 5;
+}
+
+.rosefrontrightdetail {
+    width: 40px;
+    height: 2px;
+    position: absolute;
+    background-color: transparent;
+    top: 3px;
+    left: 24px;
+    transform: translateX(-50%);
+    border-radius: 20% 50% 50% 50%;
+    font-weight: bold;
+    padding-top: 12px;
+    box-shadow: inset 0px -2px 5px 0 rgba(255, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.roseback {
+    width: 65px;
+    height: 60px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: -5px;
+    left: -20px;
+    border-radius: 50% 50% 20% 20%;
+    box-shadow: inset 0 5px 5px 0 rgba(255, 0, 0, 0.2);
+
 }
 
 /*===========
@@ -875,7 +1000,8 @@ Webbing
 .webbing {
     width: 400px;
     height: 500px;
-    background-image: linear-gradient(180deg, black, rgb(55, 0, 255), rgb(128, 0, 79), rgb(202, 131, 0), black 50%);
+    /* background-image: linear-gradient(180deg, black, rgb(136, 0, 255), rgb(128, 0, 51), rgb(202, 131, 0), black 50%); */
+    background-color: black;
     position: absolute;
     top: -79px;
     left: -100px;
@@ -883,4 +1009,70 @@ Webbing
     border-top-left-radius: 50%;
     border: 30px ridge rgba(255, 255, 255, 0.5);
     z-index: -4;
+}
+
+.hidden {
+    visibility: none;
+    background-color: black;
+    border: 2px solid black;
+}
+
+.redeyes {
+    position: absolute;
+    width: 30px;
+    height: 16px;
+    left: 550px;
+    bottom: 230px;
+    background-color: red;
+    border-radius: 10% 50% 50% 70%;
+    box-shadow: none;
+    -webkit-box-reflect: right 50px;
+    animation: blinkmonster 4s linear infinite;
+}
+
+.redeyes2 {
+    position: absolute;
+    width: 35px;
+    height: 23px;
+    left: 325px;
+    bottom: 130px;
+    background-color: red;
+    border-radius: 10% 50% 50% 70%;
+    box-shadow: none;
+    -webkit-box-reflect: right 50px;
+    animation: blinkmonster2 6s linear infinite;
+}
+
+@keyframes blinkmonster {
+    0%,
+    8%,
+    14%,
+    20%,
+    100% {
+        opacity: 10%;
+    }
+    50% {
+        opacity: 60%;
+    }
+}
+
+@keyframes blinkmonster2 {
+    0%,
+    8%,
+    14%,
+    20%,
+    100% {
+        height: 0px;
+        opacity: 0%;
+    }
+    18% {
+        height: 40px;
+        opacity: 40%
+    }
+    50% {
+        height: 10px;
+        opacity: 20%;
+    }
+
+
 }
